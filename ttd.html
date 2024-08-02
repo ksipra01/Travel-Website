@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="ttd.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <section class="header">
+    <div class="logo"><i class="fa fa-globe"></i>Explore Bharat</div>
+    <div class="row">
+      <div class="row2-call1"><a href="dest.html">Destination</a></div>
+      <div class="row2-call1"><a href="hotel.html">Hotel</a></div>
+      <div class="row2-call1"><a href="ttd.html">Things To Do</a></div>
+      <div class="row2-call1"><a href="rv.html">Rental Vehicle</a></div>
+      <div class="row2-call1"><a href="tg.html">Travel Guide</a></div>
+    </div>
+    <div class="container">
+      <a href="Travel.html"><button type="button" class="login-btn">log out</button></a>
+  </div>
+  <div class="container">
+      <a href="book.html"><button type="button" class="login-btn">Book Now</button></a>
+  </div>
+    <div class="thing">
+      <h1>Explore Bharat</h1>
+      <p>Here we are providing the different adventurous things you wished to do.
+        here you can get sky diving, paragliding, rafting, scuba diving, hiking, climbing, mountain biking and many
+        interesting things like camping, horse riding bungee jumping snow boarding.</p>
+    </div>
+  </section>
+  <section class="features">
+    <h1>Things To Do</h1>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="feature-box">
+          <div class="feature-img">
+            <img src="hiking.jpg">
+            <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-half-o"></i>
+              <i class="fa fa-star-o"></i>
+            </div>
+          </div>
+          <div class="feature-details">
+            <h4>Hiking <i class="fa fa-inr"></i>1000</h4>
+            <p> India offers a diverse range of hiking trails, from the snow-capped peaks of the Himalayas to the lush
+              forests of the Western Ghats. Here are some of the top hiking destinations and trails across India</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="feature-box">
+          <div class="feature-img">
+            <img src="puni.jpg">
+            <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-half-o"></i>
+              <i class="fa fa-star-o"></i>
+            </div>
+          </div>
+          <div class="feature-details">
+            <h4>Bungee Jumping <i class="fa fa-inr"></i>1000</h4>
+            <p>Bungee jumping in India has become increasingly popular as adventure sports gain traction. Here are some
+              of the top locations in India where you can experience the thrill of bungee jumping</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="feature-box">
+          <div class="feature-img">
+            <img src="snow skating.jpg">
+            <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-half-o"></i>
+              <i class="fa fa-star-o"></i>
+            </div>
+          </div>
+          <div class="feature-details">
+            <h4>Snow Skating <i class="fa fa-inr"></i>1000</h4>
+            <p>India does offer some locations where enthusiasts can enjoy snow-related activities, including
+              snowboarding and skiing, which are somewhat similar in spirit to snow skating. Here are some top
+              destinations in India where you can engage in snow sports</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <script>
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    function filterFunction() {
+      var input, filter, ul, li, a, i;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      div = document.getElementById("myDropdown");
+      a = div.getElementsByTagName("a");
+      for (i = 0; i < a.length; i++) {
+        txtValue = a[i].textContent || a[i].innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          a[i].style.display = "";
+        } else {
+          a[i].style.display = "none";
+        }
+      }
+    }
+  </script>
+  <script>
+    function myFunction1() {
+      document.getElementById("myDropdown1").classList.toggle("show");
+    }
+
+    function filterFunction() {
+      var input, filter, ul, li, a, i;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      div = document.getElementById("myDropdown1");
+      a = div.getElementsByTagName("a");
+      for (i = 0; i < a.length; i++) {
+        txtValue = a[i].textContent || a[i].innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          a[i].style.display = "";
+        } else {
+          a[i].style.display = "none";
+        }
+      }
+    }
+  </script>
+  <script>
+    function myFunction2() {
+      document.getElementById("myDropdown2").classList.toggle("show");
+    }
+
+    function filterFunction() {
+      var input, filter, ul, li, a, i;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      div = document.getElementById("myDropdown2");
+      a = div.getElementsByTagName("a");
+      for (i = 0; i < a.length; i++) {
+        txtValue = a[i].textContent || a[i].innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          a[i].style.display = "";
+        } else {
+          a[i].style.display = "none";
+        }
+      }
+    }
+  </script>
+  <script>
+    function myFunction3() {
+      document.getElementById("myDropdown3").classList.toggle("show");
+    }
+
+    function filterFunction() {
+      var input, filter, ul, li, a, i;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      div = document.getElementById("myDropdown3");
+      a = div.getElementsByTagName("a");
+      for (i = 0; i < a.length; i++) {
+        txtValue = a[i].textContent || a[i].innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          a[i].style.display = "";
+        } else {
+          a[i].style.display = "none";
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>

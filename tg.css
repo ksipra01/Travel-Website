@@ -1,0 +1,72 @@
+.header{
+    height: 250vh;
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(us.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding-top: 30px;
+    text-align: center;
+    color: #fff;
+}
+.logo{
+    width: 200px;
+    color: white;
+    float: left;
+}
+.login-btn{
+    width: 100px;
+    padding: 8px 0;
+    outline: none !important;
+    border-radius: 50px;
+    background: transparent;
+    color: #faf7f7;
+    float: right;
+}
+.login-btn a{
+    color: white;
+}
+.gallery{
+    padding-top: 100px;
+}
+.gallery-box img{
+    width: 80%;
+    height: 250px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 1s;
+}
+.gallery-box img:hover{
+    transform: scale(1.1);
+}
+.gallery-box a{
+    color: #faf7f7;
+}
+.h4{
+    display: block;
+    color: #fff;
+    text-shadow: -2px 2px 2px #000;
+    font-weight: 600%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.gallery-box{
+    position: relative;
+    margin-bottom: 30px;
+}
+.rating{
+    right: 15%;
+    top: 75%;
+    position: absolute;
+}
+.row2-call1{
+    width: 150px;
+    height: 40px;
+    float: left;
+    font-size: 20px;
+}
+.row2-call1 a{
+    color: white;
+    text-decoration: none;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="header">
+    <section class="head">
+        <div class="row">
+            <div class="col-md-7">
+                <div class="row1">
+                    <form name="submit-to-google-sheet">
+                    <div>Register</div>
+                        <div class="us"><label for="Name">Enter Your Name</label><br> <input type="text" class="name" placeholder="Enter your name" id="Name" name="Name"></div>
+                        <div class="us"><label for="AdharNo">Enter Your Adhar card No.</label><br> <input type="number" class="adhar number" placeholder="Enter your Adhar card No" id="AdharNo" name="AdharNo"></div>
+                        <div class="us"><label for="DOB">Enter Your Age</label> <br> <input type="number" class="Age" id="DOB" name="DOB" min="18" placeholder="Enter your age"></div>
+                        <div class="us"><label for="MobileNo">Enter Your Mobile number </label><br> <input type="number" class="mobile no" placeholder="Enter your Mobile Number" id="MobileNo" name="MobileNo"></div>
+                        <div class="us"><label for="Emailid">Enter Your Email id</label> <br> <input type="text" class="name" placeholder="Enter your Email id" id="Emailid" name="Emailid"></div>
+                        <div class="us"><label for="Password">Enter Password</label> <br> <input type="text" class="name" placeholder="Enter Password" id="Password" name="Password"></div>
+                        <div class="container">
+                            <button type="submit" class="lg">Submit</button>
+                        </div>
+                        </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwzyfiXeZRYRwRB0R9U4BgJpNUbPJJWz2kkxqVBrmflVAVJ_PrHSzMT2P7BjVs2eLfP/exec'
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>  
+</body>
+</html>

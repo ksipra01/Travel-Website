@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel website</title>
+    <link rel="stylesheet" href="book.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body class="header">
+    <section class="head">
+        <div class="row">
+            <div class="col-md-7">
+                <div class="row1">
+                    <div>Book Your Tour</div>
+                    <div class="us">
+                        Destination <br> <input type="text" class="password" placeholder="Enter Destination Name">
+                        <button onclick="addToCart(1, 'Destination', 1000.00)">Confirm</button>
+                    </div>
+                    <div class="us">
+                        Hotel/Guest House <br> <input type="text" class="password" placeholder="Enter Hotel Or Guest House">
+                        <button onclick="addToCart(2, 'Hotel', 1000.00)">Confirm</button>
+                    </div>
+                    <div class="us">
+                        Restaurant <br> <input type="text" class="password" placeholder="Enter Restaurant">
+                        <button onclick="addToCart(3, 'Restaurant', 1000.00)">Confirm</button>
+                    </div>
+                    <div class="us">
+                        Things To Do <br> <input type="text" class="password" placeholder="Enter Adventure Package">
+                        <button onclick="addToCart(4, 'Adventure', 1000.00)">Confirm</button>
+                    </div>
+                    <div class="us">
+                        Vehicle <br> <input type="text" class="password" placeholder="Enter Vehicle Name">
+                        <button onclick="addToCart(5, 'Vehicle', 1000.00)">Confirm</button>
+                    </div>
+                    <div class="us">
+                        Travel Guide/Trip Planner <br> <input type="text" class="password" placeholder="Enter Guide Name">
+                        <button onclick="addToCart(6, 'Guide', 1000.00)">Confirm</button>
+                    </div>
+                    <div id="cart-items"></div>
+                    <p id="cart-total">Total Price: 0.00</p>
+                    <div class="container">
+                        <a href="pay.html"><button type="submit" class="lg">Book</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        const cart = [];
+
+        function addToCart(id, name, price) {
+            const item = cart.find(item => item.id === id);
+            if (item) {
+                item.quantity += 1;
+            } else {
+                cart.push({ id, name, price, quantity: 1 });
+            }
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            const cartItems = document.getElementById('cart-items');
+            const cartTotal = document.getElementById('cart-total');
+            cartItems.innerHTML = '';
+            let total = 0;
+
+            cart.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = `${item.name} - ${item.price.toFixed(2)} x ${item.quantity}`;
+                cartItems.appendChild(li);
+                total += item.price * item.quantity;
+            });
+
+            cartTotal.textContent = `Total Price: ${total.toFixed(2)}`;
+        }
+    </script>
+</body>
+
+</html>

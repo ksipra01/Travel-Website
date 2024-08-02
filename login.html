@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head> 
+<body class="header">
+    <section class="head"> 
+        <div class="row">
+            <div class="col-md-7">
+                <div class="row1">
+                    <div>LOGIN</div>
+                    <!-- <form action="login.php" method="Post"> -->
+                    <form name="submit-to-google-sheet">
+                        <div class="us">
+                        <label for="Name">Username</label> <br> 
+                        <input type="text" class="username" id="Name" placeholder="Enter your name" name="Name"></div>
+                    <div class="us">
+                        <label for="Password">Password</label> <br> 
+                        <input type="text" class="password" id="Password" placeholder="Enter your Password" name="Password"></div>
+                    <div class="fp"><a href="fp.html">forgot password?</a></div>
+                    <a href="dest.html"><button type="button" class="lg">Submit</button></a>
+                    </form>
+                    <!-- </form> -->
+                    <div class="reg">Don't You have Account? <a href="reg.html">Register</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwSdUx3EIb82Ukx3HzPiC7wDaHoG9F1V440qaJOV86L3jbpyp9oS4AhCRVOBbDN1--x/exec'
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+</html>
